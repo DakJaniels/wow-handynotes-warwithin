@@ -258,7 +258,7 @@ EventUtil.ContinueOnAddOnLoaded("Blizzard_WorldMap", function()
         if mapID ~= ns.KHAZALGAR then
             return
         end
-        local points
+        local points, tx, ty
         local childMaps = C_Map.GetMapChildrenInfo(ns.KHAZALGAR)
         table.insert(childMaps, C_Map.GetMapInfo(ns.UNDERMINE)) -- it's a child of Ringing Deeps...
         for _, mapInfo in ipairs(childMaps) do
